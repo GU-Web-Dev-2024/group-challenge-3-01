@@ -138,7 +138,9 @@
             // 2. Generate a random index to select a new hole. 
             //      hint: you need to then find all "mole holes" and randomly choose one from the list.           
             // 3. Show the mole in the new hole.            
-            // 4. Add a click event listener to the mole to handle "whacking".            
+            // 4. Add a click event listener to the mole to handle "whacking".  
+            document.getElementById hole.onclick = pickWhole();
+            whole = rand;          
         }
 
         // TODO: whack mole game logic
