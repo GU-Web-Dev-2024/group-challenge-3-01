@@ -100,6 +100,8 @@
         let score = 0;
         let currentHole = Math.floor(Math.random() * 6) + 1;
         let timeLeft = 30;
+        let moleVisible = true;
+        let holeID = "hole" + currentHole;
         // Hint: Declare variables for score, currentHole, gameTimer, timeLeft, moleVisible, etc.
 
         // Get references to DOM elements
@@ -108,12 +110,17 @@
         const scoreboard = document.getElementById('score-board');
 
         startButton.addEventListener('click', startGame);
-
-        // Add event listener to the start button        
+       
 
         // TODO: start game logic
         function startGame() {
-            // Algorithm:
+            score = 0;
+            currentHole = Math.floor(Math.random() * 6) + 1;
+            holeID = "hole" + currentHole;
+            timeLeft = 30;
+            moleVisible = true;
+
+
             // 1. Reset game variables: score starts at 0, timer starts at max, mole visibility, etc.          
             // 2. Update JS variables and HTML elements to reflect this.            
             // 3. Start the mole movement interval using setInterval().
@@ -123,6 +130,9 @@
 
         // TODO: mole movement logic
         function randomHole() {
+            currentHole = Math.floor(Math.random() * 6) + 1;
+            holeID = "hole" + currentHole;
+            document.getElementById(holeID).setAttribute("style", "color: blue;")
             // Algorithm:
             // 1. Hide the mole in the previous hole (if any).           
             // 2. Generate a random index to select a new hole. 
