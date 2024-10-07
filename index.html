@@ -120,7 +120,15 @@
             timeLeft = 30;
             moleVisible = true;
 
-
+            let gameEnd = 0
+            while(timeLeft > gameEnd) {
+                timeLeft--;
+                document.getElementById.textContent = "Time Left: " + timeLeft + "s";
+                let gameTimer = setInterval(randomHole, 1000);
+                if(timeLeft == 0) {
+                    clearInterval();
+                }
+            }
             // 1. Reset game variables: score starts at 0, timer starts at max, mole visibility, etc.          
             // 2. Update JS variables and HTML elements to reflect this.            
             // 3. Start the mole movement interval using setInterval().
