@@ -139,8 +139,7 @@
             //      hint: you need to then find all "mole holes" and randomly choose one from the list.           
             // 3. Show the mole in the new hole.            
             // 4. Add a click event listener to the mole to handle "whacking".  
-            document.getElementById hole.onclick = pickWhole();
-            whole = rand;          
+                  
         }
 
         // TODO: whack mole game logic
@@ -159,6 +158,11 @@
             // 2. Hide any remaining mole on the grid.            /
             // 3. Display an alert or message showing the final score.            
             // 4. Reset the game to allow playing again.
+
+            clearInterval();
+            console.log("final score: " + score);
+            score = 0;
+            timeLeft = 30;
         }
 
         // Helpful Tips:
